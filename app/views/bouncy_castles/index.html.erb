@@ -1,0 +1,9 @@
+<h1>BouncyCastles</h1>
+<ul>
+  <% @bouncy_castles.each do |castle| %>
+  <li>  <%= link_to castle.name, bouncy_castle_path(castle) %>- <%= castle.address %> <%= '⭐️' * castle.rating %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Add a new bouncy', new_bouncy_castle_path  %>
